@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
-  console.log('hey4')
+  console.log('hey5')
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
@@ -20,11 +20,11 @@ const readline = require('readline');
 const fs = require('fs');
 global.outputArray = [];	  
 
-// function readFileAndCreateArray(fileName) {
-//   var i = 0;
-//   var myFile = readline.createInterface({
-//     input: fs.createReadStream(fileName)
-//   });
+function readFileAndCreateArray(fileName) {
+  var i = 0;
+  var myFile = readline.createInterface({
+    input: fs.createReadStream(fileName)
+  });
 
 //   myFile.on('line', function(line) { 
 //     var lineArray = line.split(",");
