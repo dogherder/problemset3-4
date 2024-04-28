@@ -15,7 +15,7 @@ http.createServer(function (req, res) {
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
-url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const url2 = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 // const readline = require('readline');
 // const fs = require('fs');
 // global.outputArray = [];	  
@@ -53,7 +53,7 @@ url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites
 //   myFile.on('close', async function() {
 //     var newData = {"city": city, "zipcode": zipcodeArray};
 //     global.outputArray.push(newData);
-//     MongoClient.connect(url, async function(err, db) {
+//     MongoClient.connect(url2, async function(err, db) {
 //       if (err) { console.log(err); }
 //       var dbo = db.db("problemset3-4");
 //       var collection = dbo.collection('places');  
