@@ -8,8 +8,7 @@ http.createServer(function (req, res) {
   urlObj = url.parse(req.url,true)
   id = urlObj.query.id
    res.write("<h2>Problem Set 3-4 Web App 1</h2>");
-  res.write("Success: zips.csv file uploaded to Mongdb");
-//   res.write ("Success!  This app is deployed online");
+  res.write("Success: zips.csv file uploaded to Mongdb.");
   // res.write ("The id is: " + id)
    res.end();
   console.log('hey8')
