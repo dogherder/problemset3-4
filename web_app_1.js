@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
-  console.log('hey5')
+  console.log('hey6')
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
@@ -26,30 +26,30 @@ function readFileAndCreateArray(fileName) {
     input: fs.createReadStream(fileName)
   });
 
-//   myFile.on('line', function(line) { 
-//     var lineArray = line.split(",");
-//     if (i == 0) {
-//       city = lineArray[0];
-//       zipcodeArray = [];
-//       zipcodeArray.push(lineArray[1]);
-//       console.log('New city ' + lineArray[0] + ' has been added with a zip code of ' + lineArray[1]);
-//     } else {
-//       if (lineArray[0] == city) {
-//         zipcodeArray.push(lineArray[1]);
-//         console.log('City ' + city + ' is being updated with the additional zip code ' + lineArray[1]);
-//       } else {
-//         //insert create new document
-//         var newData = {"city": city, "zipcode": zipcodeArray};
-//         global.outputArray.push(newData);
-//         //redefine city with new city and start a new zip array
-//         city = lineArray[0];
-//         zipcodeArray = [];
-//         zipcodeArray.push(lineArray[1]);
-//         console.log('New city ' + lineArray[0] + ' has been added with a zip code of ' + lineArray[1]);
-//       }
-//     }
-//     i++;
-//   });
+  myFile.on('line', function(line) { 
+    var lineArray = line.split(",");
+    if (i == 0) {
+      city = lineArray[0];
+      zipcodeArray = [];
+      zipcodeArray.push(lineArray[1]);
+      console.log('New city ' + lineArray[0] + ' has been added with a zip code of ' + lineArray[1]);
+    } else {
+      if (lineArray[0] == city) {
+        zipcodeArray.push(lineArray[1]);
+        console.log('City ' + city + ' is being updated with the additional zip code ' + lineArray[1]);
+      } else {
+        //insert create new document
+        var newData = {"city": city, "zipcode": zipcodeArray};
+        global.outputArray.push(newData);
+        //redefine city with new city and start a new zip array
+        city = lineArray[0];
+        zipcodeArray = [];
+        zipcodeArray.push(lineArray[1]);
+        console.log('New city ' + lineArray[0] + ' has been added with a zip code of ' + lineArray[1]);
+      }
+    }
+    i++;
+  });
 //   myFile.on('close', async function() {
 //     var newData = {"city": city, "zipcode": zipcodeArray};
 //     global.outputArray.push(newData);
