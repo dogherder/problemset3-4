@@ -2,12 +2,13 @@ var http = require('http');
 var url = require('url');
 var port = process.env.PORT || 3000;
 //var port = 8080;   //uncomment to run local
-console.log("This goes to the console window");
+// console.log("zips.csv file uploaded to Mongo");
 http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   urlObj = url.parse(req.url,true)
   id = urlObj.query.id
-   res.write("<h2>This is my hello application</h2>");
+   res.write("<h2>Problem Set 3-4 Web App 1</h2>");
+  res.write("Success: zips.csv file uploaded to Mongdb");
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
