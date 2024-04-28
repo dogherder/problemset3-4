@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
-  console.log('hey6')
+  console.log('hey7')
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
@@ -63,4 +63,4 @@ function readFileAndCreateArray(fileName) {
 //   })
 }
 
-// readFileAndCreateArray('zips.csv');
+readFileAndCreateArray('zips.csv');
