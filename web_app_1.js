@@ -1,6 +1,6 @@
-var https = require('https');
-var url = require('url');
-var port = process.env.PORT || 3000;
+// var https = require('https');
+// var url = require('url');
+// var port = process.env.PORT || 3000;
 //var port = 8080;   //uncomment to run local
 console.log("This goes to the console window");
 // https.createServer(function (req, res) {
@@ -15,7 +15,7 @@ console.log("This goes to the console window");
 // }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
-url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+// url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 // const readline = require('readline');
 // const fs = require('fs');
 // global.outputArray = [];	  
