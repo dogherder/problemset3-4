@@ -1,17 +1,17 @@
-// var https = require('https');
-// var url = require('url');
-// var port = process.env.PORT || 3000;
-//var port = 8080;   //uncomment to run local
-// https.createServer(function (req, res) {
-//   res.writeHead(200, {'Content-Type': 'text/html'});
-//   urlObj = url.parse(req.url,true)
-//   id = urlObj.query.id
-//    res.write("<h2>This is my hello application</h2>");
-//   res.write ("Success!  This app is deployed online");
-//   res.write ("The id is: " + id)
-//    res.end();
-//   console.log('hey')
-// }).listen(port);
+var https = require('https');
+var url = require('url');
+var port = process.env.PORT || 3000;
+var port = 8080;   //uncomment to run local
+https.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  urlObj = url.parse(req.url,true)
+  id = urlObj.query.id
+   res.write("<h2>This is my hello application</h2>");
+  res.write ("Success!  This app is deployed online");
+  res.write ("The id is: " + id)
+   res.end();
+  console.log('hey')
+}).listen(port);
 
 // const MongoClient = require('mongodb').MongoClient;
 // url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
