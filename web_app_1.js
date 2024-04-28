@@ -61,6 +61,6 @@ function readFileAndCreateArray(fileName) {
 //       db.close();
 //     });
 //   })
-// }
+}
 
 // readFileAndCreateArray('zips.csv');
