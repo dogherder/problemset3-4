@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
-  console.log('hey7')
+  console.log('hey8')
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
@@ -50,17 +50,17 @@ function readFileAndCreateArray(fileName) {
     }
     i++;
   });
-//   myFile.on('close', async function() {
-//     var newData = {"city": city, "zipcode": zipcodeArray};
-//     global.outputArray.push(newData);
-//     MongoClient.connect(url2, async function(err, db) {
-//       if (err) { console.log(err); }
-//       var dbo = db.db("problemset3-4");
-//       var collection = dbo.collection('places');  
-//       await collection.insertMany(global.outputArray);
-//       db.close();
-//     });
-//   })
+  myFile.on('close', async function() {
+    var newData = {"city": city, "zipcode": zipcodeArray};
+    global.outputArray.push(newData);
+    MongoClient.connect(url2, async function(err, db) {
+      if (err) { console.log(err); }
+      var dbo = db.db("problemset3-4");
+      var collection = dbo.collection('places');  
+      await collection.insertMany(global.outputArray);
+      db.close();
+    });
+  })
 }
 
 readFileAndCreateArray('zips.csv');
