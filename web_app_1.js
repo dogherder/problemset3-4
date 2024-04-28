@@ -11,12 +11,12 @@ http.createServer(function (req, res) {
 //   res.write ("Success!  This app is deployed online");
   res.write ("The id is: " + id)
    res.end();
-  console.log('hey2')
+  console.log('hey3')
 }).listen(port);
 
 const MongoClient = require('mongodb').MongoClient;
 const url2 = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-// const readline = require('readline');
+const readline = require('readline');
 // const fs = require('fs');
 // global.outputArray = [];	  
 
