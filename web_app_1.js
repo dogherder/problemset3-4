@@ -14,8 +14,8 @@ http.createServer(function (req, res) {
   console.log('hey')
 }).listen(port);
 
-// const MongoClient = require('mongodb').MongoClient;
-// const url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const MongoClient = require('mongodb').MongoClient;
+const url = "mongodb+srv://dbuser2:dbUser123@cluster0.toauqqw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 // const readline = require('readline');
 // const fs = require('fs');
 // global.outputArray = [];	  
