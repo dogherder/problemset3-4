@@ -10,7 +10,7 @@ http.createServer(function (req, res) {
    res.write("<h2>Problem Set 3-4 Web App 1</h2>");
   res.write("Success: zips.csv file uploaded to Mongdb");
 //   res.write ("Success!  This app is deployed online");
-  res.write ("The id is: " + id)
+  // res.write ("The id is: " + id)
    res.end();
   console.log('hey8')
 }).listen(port);
